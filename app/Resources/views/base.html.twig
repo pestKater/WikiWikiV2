@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
+        {% include 'layout/stylesheets.html.twig' %}
         {% block stylesheets %}{% endblock %}
+        {% include 'layout/javascripts.html.twig' %}
+        {% block javascripts %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
     </body>
 </html>
