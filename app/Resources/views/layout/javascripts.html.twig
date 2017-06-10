@@ -1,4 +1,9 @@
-{# empty Twig template #}
-<script type="text/javascript" src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/tether.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+{# jQuery #}
+<script type="text/javascript" src="{{ asset('vendor/jquery/jquery-1.11.2.min.js') }}"></script>
+
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="{{ asset('vendor/plugins-compressed.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/theme-functions.js') }}"></script>

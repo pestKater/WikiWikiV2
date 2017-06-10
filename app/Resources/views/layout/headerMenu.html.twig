@@ -1,0 +1,36 @@
+{% trans_default_domain "layout" %}
+
+<ul class="main-menu nav nav-pills">
+	<li class="dropdown"><a href="#">{{ 'menu.wiki.headline' | trans }} <i class="fa fa-angle-down"></i></a>
+		<ul class="dropdown-menu">
+			<li><a href="#">Test</a></li>
+		</ul>
+	</li>
+	<li class="dropdown"><a href="#">{{ 'menu.howto.headline' | trans }} <i class="fa fa-angle-down"></i></a>
+		<ul class="dropdown-menu">
+			<li><a href="#">Test</a></li>
+		</ul>
+	</li>
+	<li class="dropdown"><a href="#">{{ 'menu.community.headline' | trans }} <i class="fa fa-angle-down"></i></a>
+		<ul class="dropdown-menu">
+			<li><a href="#">Test</a></li>
+		</ul>
+	</li>
+	
+	{# Usermenu #}
+	{% if not app.user %}
+		<li><a href="{{ path('fos_user_security_login') }}">{{ 'menu.security.login' | trans }}</a></li>
+		<li><a href="{{ path('fos_user_registration_register') }}">{{ 'menu.security.register' | trans }}</a></li>
+	{% else %}
+		<li class="dropdown"><a href="#">{{ app.user.username }}<span class="label label-danger infinit">1</span><i class="fa fa-angle-down"></i></a>
+			<ul class="dropdown-menu">
+				<li class="dropdown-submenu"><span class="dropdown-menu-title-only">Mein Profil</span>
+					<ul class="dropdown-menu">
+						<li><a href="{{ path('fos_user_security_logout') }}">{{ 'menu.user.logout' | trans }}</a></li>
+					</ul>
+				</li>
+				<li><a href="{{ path('fos_user_security_logout') }}">{{ 'menu.user.logout' | trans }}</a></li>
+			</ul>
+		</li>
+	{% endif %}
+</ul>

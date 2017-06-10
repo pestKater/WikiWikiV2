@@ -7,6 +7,6 @@ parameters:
     database_password: root
     mailer_transport: smtp
     mailer_host: 127.0.0.1
-    mailer_user: null
-    mailer_password: null
+    mailer_user: wiki-wiki
+    mailer_password: root
     secret: 4b9aed6ef7a7764796ae01de5227960993d3b551

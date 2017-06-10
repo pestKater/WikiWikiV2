@@ -1,0 +1,28 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+	<h3>{{ 'login.headline' | trans({}, "security") }}</h3>
+	<form action="{{ path("fos_user_security_check") }}" method="post">
+	    {% if csrf_token %}
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+	    {% endif %}
+		<div class="form-group col-md-12">
+	    		<label for="username">{{ 'security.login.username'|trans }}</label>
+	    		<input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+		</div>
+		<div class="form-group col-md-12 m-b-5">
+	    		<label for="password">{{ 'security.login.password'|trans }}</label>
+	    		<input class="form-control" type="password" id="password" name="_password" required="required" />
+		</div>
+		<div class="form-group col-md-12 form-inline text-left">
+			<div class="checkbox">
+		    		<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+		    		<small>{{ 'security.login.remember_me'|trans }}</small>
+			</div>
+			<a class="right" href="{{ path('fos_user_resetting_request') }}">{{ 'login.passwordlost' | trans({}, "security") }}</a>
+		</div>
+<div class="text-left col-md-12 form-group">
+	    <input class="btn btn-primary" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+</div>
+	</form>
+	<p class="text-left">{{ 'login.noaccount.text' | trans({}, "security") }}<br />
+<a href="{{ path('fos_user_registration_register') }}">{{ 'login.noaccount.link' | trans({}, "security") }}</a></p>

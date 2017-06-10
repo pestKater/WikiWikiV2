@@ -1,0 +1,59 @@
+{% trans_default_domain "layout" %}
+<!-- FOOTER -->
+<footer id="footer" class="background-dark text-grey">
+
+    <div class="footer-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="widget clearfix widget-categories">
+                        <h4 class="widget-title">{{ 'footer.services.headline' | trans }}</h4>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="widget clearfix widget-categories">
+                        <h4 class="widget-title">{{ 'footer.categories.headline' | trans }}</h4>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="widget clearfix widget-categories">
+                        <h4 class="widget-title">{{ 'footer.links.headline' | trans }}</h4>
+                        <ul class="list list-arrow-icons">
+                            <li><a href="#">{{ 'footer.links.support' | trans }}</a></li>
+                            <li><a href="#">{{ 'footer.links.team' | trans }}</a></li>
+                            <li><a href="#">{{ 'footer.links.faq' | trans }}</a></li>
+                            <li><a href="#">{{ 'footer.links.aboutus' | trans }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <img src="{{ asset('images/logo-dark.png') }}" alt="Logo Footer" style="margin-left: -4px; margin-bottom: 12px; margin-top: 12px;">
+
+                    <p>{{ 'footer.info.text' | trans }}</p>
+                    <div class="seperator seperator-dark seperator-simple"></div>
+                    <ul class="list">
+                        <li> <a href="#" title=""> {{ 'footer.info.terms' | trans }}</a></li>
+                        <li> <a href="#" title=""> {{ 'footer.info.privacy' | trans }}</a></li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright-content">
+        <div class="container">
+            <div class="row">
+                <div class="copyright-text text-center"> &copy; 2016 - {{ 'layout.pagetitle' | trans }} - {{ 'layout.subtitle' | trans }}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END: FOOTER -->

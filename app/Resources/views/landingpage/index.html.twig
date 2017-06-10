@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain "landingpage" %}
+
+{% block body %}
+<!-- SECTION -->
+<section>
+	<div class="container landingpage-overview">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="{{ asset('images/wiki-wiki/hist.jpg') }}" alt="{{ 'btn.anleitungen'|trans }}" class="img-circle" />
+        		<a href="#" class="button aqua button-3d effect icon-left">
+					<span>
+						<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						{{ 'btn.historisches'|trans }}
+					</span>
+				</a>
+				<p>{{ 'text.historisches'|trans }}</p>
+			</div>
+			<div class="col-md-4">
+				<img src="{{ asset('images/wiki-wiki/howto.jpg') }}" alt="{{ 'btn.anleitungen'|trans }}" class="img-circle" />
+        		<a href="#" class="button aqua button-3d effect icon-left">
+					<span>
+						<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						{{ 'btn.anleitungen'|trans }}
+					</span>
+				</a>
+				<p>{{ 'text.anleitungen'|trans }}</p>
+			</div>
+			<div class="col-md-4">
+				<img src="{{ asset('images/wiki-wiki/comm.jpg') }}" alt="{{ 'btn.anleitungen'|trans }}" class="img-circle" />
+        		<a href="#" class="button aqua button-3d effect icon-left">
+					<span>
+						<i class="fa fa-arrow-right" aria-hidden="true"></i>
+						{{ 'btn.community'|trans }}
+					</span>
+				</a>
+				<p>{{ 'text.community'|trans }}</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="background-grey p-b-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="icon-box effect medium border center">
+					<div class="icon">
+						<a href="#">
+							<i class="fa fa-lightbulb-o"></i>
+						</a>
+					</div>
+					<div class="counter">
+						<span data-speed="1500" data-refresh-interval="50" data-to="4500" data-from="1000" data-seperator="true">4500</span>
+					</div>
+					<p>Lorem Ipsum</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
+

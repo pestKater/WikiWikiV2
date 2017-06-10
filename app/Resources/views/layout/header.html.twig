@@ -1,0 +1,47 @@
+{% trans_default_domain 'layout' %}
+<!-- HEADER -->
+{% if app.request.get('_route') == 'homepage' %}
+<header id="header" class="header-dark-transparent header-dark">
+{% else %}
+	<header id="header" class="header-mini header-dark">
+{% endif %}
+	<div id="header-wrap">
+		<div class="container">
+
+			<!--LOGO-->
+			<div id="logo">
+				<a href="index.html" class="logo" data-dark-logo="{{ asset('images/logo-dark.png') }}">
+					<img src="{{ asset('images/logo.png') }}" alt="Polo Logo">
+				</a>
+			</div>
+			<!--END: LOGO-->
+
+			<!--MOBILE MENU -->
+			<div class="nav-main-menu-responsive">
+				<button class="lines-button x">
+					<span class="lines"></span>
+				</button>
+			</div>
+			<!--END: MOBILE MENU -->
+
+			<!--TOP SEARCH -->
+			<div id="top-search"> <a id="top-search-trigger"><i class="fa fa-search"></i><i class="fa fa-close"></i></a>
+				<form action="search-results-page.html" method="get">
+					<input type="text" name="q" class="form-control" value="" placeholder="{{ 'layout.header.search.placeholder' | trans }}">
+				</form>
+			</div>
+			<!--END: TOP SEARCH -->
+			
+			<!--NAVIGATION-->
+			<div class="navbar-collapse collapse main-menu-collapse navigation-wrap">
+				<div class="container">
+					<nav id="mainMenu" class="main-menu mega-menu">
+						{% include 'layout/headerMenu.html.twig' %}
+					</nav>
+				</div>
+			</div>
+			<!--END: NAVIGATION-->
+		</div>
+	</div>
+</header>
+<!-- END: HEADER -->

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+{% endblock %}
+{% block body %}
+	<section class="parallax container-fullscreen" style="background-image:url({{ asset('images/wiki-wiki/header.jpg') }});">
+		<div class="text-middle">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 p-30 background-white">
+			    		{% block fos_user_content %}
+			    		{% endblock fos_user_content %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
